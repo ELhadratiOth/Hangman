@@ -146,7 +146,7 @@ function getData(i){
                     } }
           if(checked){
                     Tries.innerText = parseFloat( Tries.innerText)  - 1 ;
-                    imgHang.style.background = `url(image${Tries.innerText}${Tries.innerText}.gif)`     ;
+                    imgHang.style.background = `url(./Images/image${Tries.innerText}${Tries.innerText}.gif)`;
                     imgHang.style.backgroundRepeat = `no-repeat`;
                     imgHang.style.backgroundSize = `100% 100%`     ;
                     
@@ -186,7 +186,7 @@ function defaultvals(){
     
     parent.innerHTML = "";
     Tries.innerText = 7 ;
-    imgHang.style.background = `url(image77.gif)`;
+    imgHang.style.background = `url(./Images/image77.gif)`;
     imgHang.style.backgroundRepeat = `no-repeat`;
     imgHang.style.backgroundSize = `100% 100%`     ;
     getRandomWord();
@@ -265,13 +265,17 @@ function clipBoard(){
     score.innerText = parseInt((empty / test.length) *100 ) +'%' ;
     if ( parseInt(score.innerText) == 100){
 
-        document.getElementById('imgwinLose').setAttribute('src' , 'win.png') ;
+        document
+          .getElementById('imgwinLose')
+          .setAttribute('src', './Images/win.png');
         document.getElementById('imgwinLose').classList.add('winshape') ;
         document.getElementById('word').classList.add('hide2') ;
 
     }
     else{
-        document.getElementById('imgwinLose').setAttribute('src' , 'game-over.png') ;
+        document
+          .getElementById('imgwinLose')
+          .setAttribute('src', './Images/game-over.png');
         document.getElementById('imgwinLose').classList.remove('winshape') ;
         document.getElementById('word').classList.add('hide2') ;
     }
@@ -351,7 +355,7 @@ hint.onmouseover = function () {
       hint.style.opacity = '0'; 
   
       setTimeout(() => {
-        hint.src = "light-bulb2png.png"; 
+        hint.src = './Images/light-bulb2png.png'; 
         hint.style.opacity = '1'; 
         document.querySelector('.cost').classList.add('cost2') ;
         document.querySelector('.cost-img').classList.add('cost-img2') ;
@@ -368,7 +372,7 @@ hint.onmouseover = function () {
       hint.style.opacity = '0'; 
   
       setTimeout(() => {
-        hint.src = "light-bulb.png"; 
+        hint.src = './Images/light-bulb.png'; 
         hint.style.opacity = '1'; 
         document.querySelector('.cost').classList.remove('cost2') ;
         document.querySelector('.cost-img').classList.remove('cost-img2') ;
