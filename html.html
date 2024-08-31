@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="css.css">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+          <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+</head>
+<body>
+          <div class="container">
+                    <div class="quick" onclick="returnElement()">
+                              <img class="arrow" src="arrow.png" alt="ttt" >
+                    </div>
+                    <div class="headr">
+                              
+                              <img class="close" src="close.png" alt="close" onclick="clearNav();">
+                              <header class="header">
+
+                                        <div class="Name-app">
+                                                  <img class="logo" id="logo" src="title.png" alt="logo" >
+                                        </div>
+                                        <div class="categorie">
+                                                  <select name="categorie" id="cat" onchange="getRandomWord(this.value)" >
+                                                            <option value="info" selected>Prog Lang</option>
+                                                            <option value="animals">Animals</option>
+                                                            <option value="cars">Cars</option>
+                                                            <option value="brands">Brands</option>
+
+                                                            <option value="fruits">Fruits</option>
+                                                  </select>
+                                        </div>
+                                        <div class="settings hide"><img  src="load.png" onclick="defaultvals();"></div>
+                              </header>
+
+                    </div> 
+                
+                    <div class="start" id="start" >
+                              <img class="imgwinLose hide hide2"  id="imgwinLose"  >
+
+                              <div class="stats hide" id="stats">
+                                        <p class="score" id="score">0</p>
+                                        <p class="tries-M" id="triesM">0</p>
+                                        <p class="word" id="word"></p>
+                                        <p class="time" id="time">0</p>
+                                        <p class="Hscore" id="Hscore">0</p>
+                                        <button class="res-btn" onclick="resetTopScore();">Reset High Score</button>  
+
+                              </div>
+                              <div class="instruction">
+                                        <h2>Some Instructions before playing</h2>
+                                        <p>In this game, you have to guess the word by clicking the letters.</p>
+                                        <p>The score will increase when you select an appropriate letter.</p>
+                                        <p>The game ends when you've finished guessing the word or when you use <br> all your tries.</p>
+                                        <p>Enjoy! :)</p>
+
+                              </div>
+                              <img src="start.png" id="startbtn" class="start-btn" onclick="startgame();">
+                    </div>
+
+                    <div class="main hide" id="main" >
+                                        <img class="throphyimg" src="trophy.png" >
+                                        <p class="throphytext"></p>
+                                        <p class="timer" id="timer">00</p>
+                                                  <p class="Tries" id="Tries">7</p>
+                                                  <img class="hint" id="lamp" onclick="givAhint()" src="light-bulb.png" alt="">
+                                                  <img class="credit-img" id="imgcredit" src="credit.png">
+                                                  <p class="cost">-10</p>
+                                                  <img class="cost-img" src="credit.png" alt="credit-img">
+                                                  <p class="credit" id="credit">100</p>
+                                                  <div class="hangman">
+                                                            
+                                                  </div>
+                                                  <div class="words" id="parent">
+                                                            <p class="alpahbet"></p>
+                                                            <p class="alpahbet"></p>
+                                                            <p class="alpahbet"></p>
+                                                            <p class="alpahbet"></p>
+
+
+                                                  </div>
+
+                                                  <div class="list-alpha">
+                                                            
+
+                                                  </div>
+                               
+                             
+                                                  
+
+
+                              </div>
+                  
+
+          </div>
+
+
+          <script src="js.js"></script>
+</body>
+</html>
